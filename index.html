@@ -38,22 +38,29 @@
     <!--  UI Items to Modify -->
     
     <h1 class="mdc-typography--display1">dana's text-to-speech app</h1>
+   
+    <p>put in some text:<br>
+      <input type="text" name="phrase" id="phrase">
+      <button type="button" class="standard mdc-button mdc-button--raised">
+        say it!
+      </button>
+    </p>
     
     
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="standard mdc-button mdc-button--raised">
       Welcome to UIC!
     </button>
     <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Oh word?
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Weird flex but okay
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standardmdc-button mdc-button--raised">
       Yes
     </button> <br>
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="standard mdc-button mdc-button--raised">
       Damn, that's crazy
     </button> <br>
     
@@ -101,8 +108,12 @@
             
         // hook up event handler on the buttons
         
-         $("button").on("click", function() {
+         $("button.standard").on("click", function() {
            sayIt($(this).text());
+         });
+                                        
+         $("button.special").on("click", function() {
+           sayIt($(#phrase).text());
          });
         
 
